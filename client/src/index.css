@@ -11,6 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(/src/images/starlight.avif);
 }
 
 code {
@@ -25,6 +26,7 @@ h1 {
 
 h2 {
   text-align: center;
+  color: #f1356d;
 
 }
 
@@ -42,6 +44,7 @@ button {
 label {
   text-align: center;
   display: block;
+  color: #f1356d;
   
 }
 
@@ -60,21 +63,40 @@ div {
   text-align: center;
   display: block;
   
+  
 }
 
 form {
   text-align: center;
   display: block;
   
+  
 }
 
 ul {
   text-align: center;
   display: block;
+  
 }
 
 li {
   text-align: center;
   display: block;
-  
+  color: #f1356d;
+}
+
+span {
+  color: #f1356d;
+}
+
+a {
+  color: White;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
 }
