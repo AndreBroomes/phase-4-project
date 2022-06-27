@@ -1,4 +1,5 @@
 class PositionsController < ApplicationController
+    rescue_from ActiveRecord::RecordNotFound, with: :Record_not_found
     def index
         positions = Position.all
         render json: positions, status: 200

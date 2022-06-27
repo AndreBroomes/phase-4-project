@@ -36,13 +36,12 @@ function Home() {
 
   return (
     <div>
-        <div>Home</div>
       <h2>Positions</h2>
       <ul>
         {positions.map((position) => (
           <li key={position.id}>
             <span>
-              {position.name} | Difficulty: {position.difficulty}
+              {position.name} | Full Time
             </span>
             <button onClick={() => handleDeletePosition(position.id)}>
               Delete

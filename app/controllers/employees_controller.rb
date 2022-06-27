@@ -1,4 +1,6 @@
 class EmployeesController < ApplicationController
+    rescue_from ActiveRecord::RecordNotFound, with: :Response_record_not_found
+    rescue_from ActiveRecord::RecordInvalid, with: :Record_not_valid
     def index
         employees = Employee.all
         render json: employees, status: 200

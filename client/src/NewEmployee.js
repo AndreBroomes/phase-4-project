@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function NewEmployee({ onAddEmployee }) {
+function NewCamper({ onAddEmployee }) {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [errors, setErrors] = useState([]);
@@ -62,4 +62,4 @@ function NewEmployee({ onAddEmployee }) {
   );
 }
 
-export default NewEmployee;
+export default NewCamper;

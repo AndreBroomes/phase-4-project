@@ -44,7 +44,7 @@ function Employee() {
       <ul>
         {employee.positions.map((position) => (
           <li key={position.id}>
-            {position.name} | Difficulty: {position.difficulty}
+            {position.name} | Full Time
           </li>
         ))}
       </ul>

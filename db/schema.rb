@@ -10,9 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_25_205504) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_26_183933) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  # Custom types defined in this database.
+  # Note that some types may not work with other database engines. Be careful if changing database.
+  create_enum "account_type", ["individual", "company"]
+
+  create_table "accounts", force: :cascade do |t|
+    t.enum "account_type", default: "individual", null: false, enum_type: "account_type"
+    t.string "name", null: false
+    t.string "company_number"
+    t.date "date_of_birth"
+    t.string "email", null: false
+    t.string "password_digest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "employees", force: :cascade do |t|
     t.string "name"
@@ -23,7 +38,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_25_205504) do
 
   create_table "positions", force: :cascade do |t|
     t.string "name"
-    t.integer "difficulty"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

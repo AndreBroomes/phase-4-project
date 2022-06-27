@@ -41,9 +41,9 @@ function NewSignup({ employeeId, onAddPosition }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Add New Signup</h2>
+      <h2>Add New Position</h2>
       <div>
-        <label htmlFor="activity">Positions</label>
+        <label htmlFor="activity">Position</label>
         <select
           id="activity"
           value={positionId}
@@ -58,10 +58,10 @@ function NewSignup({ employeeId, onAddPosition }) {
         </select>
       </div>
       <div>
-        <label htmlFor="time">Year</label>
+        <label htmlFor="year">Year</label>
         <input
           type="number"
-          id="time"
+          id="year"
           value={year}
           onChange={(e) => setYear(e.target.value)}
         />
@@ -71,7 +71,7 @@ function NewSignup({ employeeId, onAddPosition }) {
           {err}
         </p>
       ))}
-      <button type="submit">Submit</button>
+      <button type="submit" className="button">Submit</button>
     </form>
   );
 }

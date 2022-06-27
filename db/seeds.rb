@@ -9,14 +9,6 @@
 # puts "👩👨 Seeding users..."
 
 
-user1 = User.create(username: 'Jen', password: 'apple')
-user2 = User.create(username: 'Shani', password: 'banana')
-user3 = User.create(username: 'Gehrig', password: 'banana')
-user4 = User.create(username: 'Ethan', password: 'banana')
-user5 = User.create(username: 'Hain', password: 'banana')
-user6 = User.create(username: 'Ilolo', password: 'banana')
-user7 = User.create(username: 'Vivian', password: 'banana')
-user8 = User.create(username: 'Rodney', password: 'banana')
 
 puts "🏕 Seeding employees..."
 employee1 = Employee.create(name: 'Caitlin', age: 18)
@@ -29,14 +21,14 @@ employee7 = Employee.create(name: 'Amanda', age: 29)
 employee8 = Employee.create(name: 'Nick', age: 32)
 
 puts "🏕 Seeding positions..."
-position1 = Position.create(name: 'Mechanic', difficulty: 2)
-position2 = Position.create(name: 'FrontEnd Developer', difficulty: 3)
-position3 = Position.create(name: 'Manager', difficulty: 2)
-position4 = Position.create(name: 'Physical Therapist', difficulty: 5)
-position5 = Position.create(name: 'Chef', difficulty: 3)
-position6 = Position.create(name: 'Receptionist', difficulty: 4)
-position7 = Position.create(name: 'Pharmacist', difficulty: 3)
-position8 = Position.create(name: 'Teacher', difficulty: 5)
+position1 = Position.create(name: 'Mechanic', )
+position2 = Position.create(name: 'FrontEnd Developer' )
+position3 = Position.create(name: 'Manager', )
+position4 = Position.create(name: 'Physical Therapist' )
+position5 = Position.create(name: 'Chef')
+position6 = Position.create(name: 'Receptionist' )
+position7 = Position.create(name: 'Pharmacist' )
+position8 = Position.create(name: 'Teacher' )
 
 puts "🏕 Seeding signups..."
 Signup.create(employee_id: employee1.id, position_id: position2.id, year: 2022)
